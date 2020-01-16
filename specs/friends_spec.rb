@@ -120,16 +120,21 @@ end
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
 
 def test_money_laundering
-  result = money_laundering(@person5, @person4)
-  remaining_money = @person5[:monies]
-  assert_equal = (80, remaining_money)
+  result = money_laundering(@person5, @person4, 20)
+  remaining_money_4 = @person4[:monies]
+  assert_equal(40, remaining_money_4)
+  remaining_money_5 = @person5[:monies]
+  assert_equal(80, remaining_money_5)
 end
 
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
 
-
+def test_set_of_favourite_food
+  result= set_of_favourite_food(@people)
+  assert_equal(@people[:snacks], result)
+end
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
 

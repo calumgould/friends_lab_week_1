@@ -31,11 +31,15 @@ def total_money(people)
   return sum
 end
 
-def money_laundering(lender, lendee, money)
-  lender_money = lender[:monies]
-  lendee_money = lendee[:monies]
-  lender_money -= 20
-  lendee_money += 20
-  return lender_money
-  return lendee_money
+def money_laundering(lender, lendee, amount_to_lend)
+  amount_to_lend = 20
+  lender[:monies] -= amount_to_lend
+  lendee[:monies] += amount_to_lend
+  return lender[:monies]
+  return lendee[:monies]
 end
+
+# def set_of_favourite_food(person,input_snack)
+# all_snacks=[]
+#   for snack in person
+# end
